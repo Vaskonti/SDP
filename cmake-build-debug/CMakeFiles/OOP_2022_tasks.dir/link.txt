@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\OOP_2022_tasks.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc CMakeFiles\OOP_2022_tasks.dir/objects.a @CMakeFiles\OOP_2022_tasks.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\OOP_2022_tasks.dir/objects.a -Wl,--no-whole-archive -o OOP_2022_tasks.exe -Wl,--out-implib,libOOP_2022_tasks.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\OOP_2022_tasks.dir\linklibs.rsp

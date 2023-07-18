@@ -1,0 +1,3 @@
+D:/OOP-2022-tasks/cmake-build-debug/CMakeFiles/OOP_2022_tasks.dir
+D:/OOP-2022-tasks/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/OOP-2022-tasks/cmake-build-debug/CMakeFiles/rebuild_cache.dir
