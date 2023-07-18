@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/OOP-2022-tasks/Classes/exercises/main.cpp" "CMakeFiles/OOP_2022_tasks.dir/Classes/exercises/main.cpp.obj" "gcc" "CMakeFiles/OOP_2022_tasks.dir/Classes/exercises/main.cpp.obj.d"
+  "/home/vasilhristov/projects/SDP/Classes/exercises/main.cpp" "CMakeFiles/OOP_2022_tasks.dir/Classes/exercises/main.cpp.o" "gcc" "CMakeFiles/OOP_2022_tasks.dir/Classes/exercises/main.cpp.o.d"
   )
 
 # Targets to which this target links.
