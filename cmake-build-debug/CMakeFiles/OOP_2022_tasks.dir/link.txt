@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/OOP_2022_tasks.dir/Classes/exercises/main.cpp.o -o OOP_2022_tasks 

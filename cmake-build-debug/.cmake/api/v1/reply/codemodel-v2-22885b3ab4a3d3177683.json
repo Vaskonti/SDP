@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "OOP_2022_tasks::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-OOP_2022_tasks-Debug-691d57994bcf8f834065.json",
-					"name" : "OOP_2022_tasks",
+					"id" : "SDP::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SDP-Debug-08791311d1849ff0455c.json",
+					"name" : "SDP",
 					"projectIndex" : 0
 				}
 			]
@@ -55,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }

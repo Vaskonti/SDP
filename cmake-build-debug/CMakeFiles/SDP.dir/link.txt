@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/SDP.dir/main.cpp.o -o SDP 
