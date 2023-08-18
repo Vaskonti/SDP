@@ -4,7 +4,8 @@ project(OOP_2022_tasks)
 set(CMAKE_CXX_STANDARD 23)
 
 
-add_executable(SDP Linked-Lists/LinkedList.cpp)
+add_executable(SDP
+        "Double Linked List/DLL.cpp")
 #add_executable(SDP
 #        algorithms.cpp
 #            main.cpp)

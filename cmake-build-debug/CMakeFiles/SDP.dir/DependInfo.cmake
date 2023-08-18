@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.cpp" "CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o" "gcc" "CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o.d"
+  "/home/vasilhristov/projects/SDP/Double Linked List/DLL.cpp" "CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.o" "gcc" "CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

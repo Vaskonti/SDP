@@ -129,29 +129,29 @@ SDP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/build
 .PHONY : SDP/fast
 
-Linked-Lists/LinkedList.o: Linked-Lists/LinkedList.cpp.o
-.PHONY : Linked-Lists/LinkedList.o
+Double_Linked_List/DLL.o: Double_Linked_List/DLL.cpp.o
+.PHONY : Double_Linked_List/DLL.o
 
 # target to build an object file
-Linked-Lists/LinkedList.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o
-.PHONY : Linked-Lists/LinkedList.cpp.o
+Double_Linked_List/DLL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.o
+.PHONY : Double_Linked_List/DLL.cpp.o
 
-Linked-Lists/LinkedList.i: Linked-Lists/LinkedList.cpp.i
-.PHONY : Linked-Lists/LinkedList.i
+Double_Linked_List/DLL.i: Double_Linked_List/DLL.cpp.i
+.PHONY : Double_Linked_List/DLL.i
 
 # target to preprocess a source file
-Linked-Lists/LinkedList.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.i
-.PHONY : Linked-Lists/LinkedList.cpp.i
+Double_Linked_List/DLL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.i
+.PHONY : Double_Linked_List/DLL.cpp.i
 
-Linked-Lists/LinkedList.s: Linked-Lists/LinkedList.cpp.s
-.PHONY : Linked-Lists/LinkedList.s
+Double_Linked_List/DLL.s: Double_Linked_List/DLL.cpp.s
+.PHONY : Double_Linked_List/DLL.s
 
 # target to generate assembly for a file
-Linked-Lists/LinkedList.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.s
-.PHONY : Linked-Lists/LinkedList.cpp.s
+Double_Linked_List/DLL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.s
+.PHONY : Double_Linked_List/DLL.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SDP"
-	@echo "... Linked-Lists/LinkedList.o"
-	@echo "... Linked-Lists/LinkedList.i"
-	@echo "... Linked-Lists/LinkedList.s"
+	@echo "... Double_Linked_List/DLL.o"
+	@echo "... Double_Linked_List/DLL.i"
+	@echo "... Double_Linked_List/DLL.s"
 .PHONY : help
 
 

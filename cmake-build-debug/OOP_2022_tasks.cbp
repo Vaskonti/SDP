@@ -82,10 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.cpp">
+		<Unit filename="/home/vasilhristov/projects/SDP/Double Linked List/DLL.cpp">
 			<Option target="SDP"/>
 		</Unit>
-		<Unit filename="/home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.h">
+		<Unit filename="/home/vasilhristov/projects/SDP/Double Linked List/DLL.h">
 			<Option target="SDP"/>
 		</Unit>
 		<Unit filename="/home/vasilhristov/projects/SDP/CMakeLists.txt">

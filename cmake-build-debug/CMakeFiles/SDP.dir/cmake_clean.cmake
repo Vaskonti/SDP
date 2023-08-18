@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o"
-  "CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o.d"
+  "CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.o"
+  "CMakeFiles/SDP.dir/Double_Linked_List/DLL.cpp.o.d"
   "SDP"
   "SDP.pdb"
 )
