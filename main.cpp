@@ -1,127 +1,276 @@
 #include <iostream>
 #include <stack>
-#include "Linked-Lists/LinkedList.h"
+#include "list"
+#include "Linked-Lists/LinkedList.cpp"
+//#include "Linked-Lists/LinkedList.h"
 
-template <typename Type>
-void placeElementIndex(LinkedList<Type> *& list, int index, Type element) {
-    int ind = 0;
-    if (index == 0) {
-        LinkedList<Type> * node = new LinkedList<Type>(element);
-        node->next = list;
-        list = node;
-        return;
-    }
-    LinkedList<Type> * temp = list;
-    while (list != nullptr && ind < index - 1) {
-        list = list->next;
-        ind++;
-    }
-    LinkedList<Type> * newNode = new LinkedList<Type>(element);
-    newNode->next = list->next;
-    list->next = newNode;
-    list = temp;
-}
-template <typename Type>
-void deleteLinkedList(LinkedList<Type> *& list)
-{
-    while (list != nullptr)
-    {
-        LinkedList<Type> * node = list;
-        list = list->next;
-        delete node;
-    }
-}
+template<typename Type>
+typename std::list<Type>::iterator getMiddle(std::list<Type> *list) {
+    auto fast = list->begin();
+    auto slow = list->begin();
 
-template <typename Type>
-void displayLinkedList (LinkedList<Type> *& list)
-{
-    while (list != nullptr)
-    {
-        if (list->next != nullptr)
-        {
-            std::cout << list->val << " -> ";
-        } else {
-            std::cout<< list->val << std::endl;
-        }
-        list = list->next;
-    }
-}
-
-template <typename Type>
-void removeElementIndex(LinkedList<Type> *& list, int index)
-{
-    int ind = 0;
-    if (index == 0) {
-        LinkedList<Type> * node = list;
-        list = list->next;
-        delete node;
-        return;
-    } else {
-        LinkedList<Type> * temp = list;
-        while (list != nullptr && ind < index - 1) {
-            list = list->next;
-        }
-        LinkedList<Type> * node = list->next;
-        list->next = list->next->next;
-        list = temp;
-        delete node;
-    }
-}
-template <typename Type>
-void addElementFront(LinkedList<Type> *& list, Type element)
-{
-    LinkedList<Type> * node = new LinkedList<Type>(element);
-    node->next = list;
-    list = node;
-}
-
-template <typename Type>
-void reverse(LinkedList<Type> *& list)
-{
-    if (list == nullptr)
-        return;
-    std::stack<Type> stack;
-    LinkedList<Type> * temp = list;
-    while (temp != nullptr)
-    {
-        stack.push(temp->val);
-        temp = temp->next;
-    }
-    temp = list;
-    while (!stack.empty())
-    {
-        temp->val = stack.top();
-        stack.pop();
-        temp = temp->next;
-    }
-}
-template <typename Type>
-LinkedList<Type> * getMiddle(LinkedList<Type> *& list)
-{
-    LinkedList<Type> * slow = list;
-    LinkedList<Type> * fast = list;
-
-    while (fast && fast->next)
-    {
-        fast = fast->next->next;
-        slow = slow->next;
+    while (fast != list->end() && std::next(fast) != list->end()) {
+        fast++;
+        fast++;
+        slow++;
     }
     return slow;
 }
 
+template<typename Type>
+void shuffle(typename std::list<Type>::iterator it) {
+    auto *middle = getMiddle(it);
+}
 
+void removeAtIndex(Node<int> *&head, int index) {
+    if (head == nullptr) {
+        return;
+    }
+
+    if (index == 0) {
+        Node<int> *temp = head;
+        head = head->next;
+        delete temp;
+        return;
+    }
+
+    Node<int> *current = head;
+    Node<int> *prev = nullptr;
+
+    int currentIndex = 0;
+    while (current != nullptr && currentIndex < index) {
+        prev = current;
+        current = current->next;
+        currentIndex++;
+    }
+    if (current == nullptr) {
+        return;
+    }
+    prev->next = current->next;
+    delete current;
+}
+
+
+void removeIdx(Node<int> *&head) {
+    if (head == nullptr) {
+        return;
+    }
+    Node<int> *temp = head;
+    int lastIdx = 0;
+    while (temp != nullptr) {
+        lastIdx++;
+        temp = temp->next;
+    }
+    std::cout << lastIdx << std::endl;
+    temp = head;
+    Node<int> * prev = nullptr;
+    int index = 0;
+    while (temp != nullptr) {
+        if (temp->val == lastIdx - 1 - index) {
+            if (prev == nullptr) {
+                Node<int> * del = head;
+                head = head->next;
+                delete del;
+                temp = head;
+            } else {
+                prev->next = temp->next;
+                delete temp;
+                temp = prev->next;
+            }
+        } else {
+            prev = temp;
+            temp = temp->next;
+        }
+        index++;
+    }
+}
+
+template <typename Type>
+void insertAtEnd(Node<Type> *&head, int element) {
+    Node<Type> *newNode = new Node(element);
+    if (head == nullptr) {
+        head = newNode;
+        return;
+    }
+
+    Node<Type> *current = head;
+    while (current->next != nullptr) {
+        current = current->next;
+    }
+
+    current->next = newNode;
+}
+
+template <typename Type>
+void printList(Node<Type> *&head) {
+    Node<Type> *node = head;
+    while (node != nullptr) {
+        if (node->next != nullptr) {
+            std::cout << node->val << " -> ";
+        } else {
+            std::cout << node->val << std::endl;
+        }
+        node = node->next;
+    }
+}
+template <typename Type>
+void deleteLinkedList(Node<Type> *&list) {
+    while (list != nullptr) {
+        Node<Type> *node = list;
+        list = list->next;
+        delete node;
+    }
+}
+template <typename Type>
+void popFront(Node<Type> *&node) {
+    if (node == nullptr) {
+        return;
+    }
+    Node<Type> *node1 = node;
+    node1->next = node->next;
+    node = node->next;
+    delete node1;
+}
+template <typename Type>
+void pushFront(Node<Type> *&node, int el) {
+    if (node == nullptr) {
+        node = new Node(el);
+    } else {
+        Node<Type> *node1 = new Node(el, node);
+        node = node1;
+    }
+}
+template <typename Type>
+void printListRec(Node<Type> *& node) {
+    if (node == nullptr) {
+        return;
+    }
+    std::cout<< node->val << " ";
+    printListRec(node->next);
+}
+template <typename Type>
+void mirror(Node<Type> *& head) {
+    if (head == nullptr) {
+        return;
+    }
+    if(head->next == nullptr) {
+        insertAtEnd(head, head->val);
+        return;
+    }
+    Node<Type> * rev = getReversed(head);
+    Node<Type> * current = head;
+    while(current != nullptr) {
+        current = current->next;
+    }
+    while (rev != nullptr) {
+        Node<Type> * node = rev;
+        insertAtEnd(head, rev->val);
+        rev = rev->next;
+        delete node;
+    }
+}
+
+template <typename Type>
+void append(Node<Type> *& head, Node<Type> & other) {
+    Node<Type> * temp = head;
+
+    while(temp) {
+        temp = temp->next;
+    }
+    Node<Type> * other1 = other;
+    while (other1) {
+        Node<Type> * node = other1;
+        temp = other1;
+    }
+}
+template <typename Type>
+Node<Type> * getReversed(Node<Type> *& head) {
+    if (head == nullptr) {
+        return nullptr;
+    }
+    if (head->next == nullptr) {
+        return head;
+    }
+    std::stack<Type> stack;
+    Node<Type> * current = head;
+    while(current != nullptr) {
+        stack.push(current->val);
+        current = current->next;
+    }
+    auto * reversed = new Node<Type>(stack.top());
+    current = reversed;
+    stack.pop();
+    size_t size = stack.size();
+    for (int i = 0; i < size ; ++i) {
+        auto * node = new Node<Type>(stack.top());
+        reversed->next = node;
+        reversed = reversed->next;
+        stack.pop();
+    }
+    return current;
+}
+
+template <typename Type>
+void fillgaps(Node<Type> *& head) {
+    if (head == nullptr) {
+        return;
+    }
+    if (head->next == nullptr) {
+        return;
+    }
+
+    Node<Type> * current = head;
+
+    while (current->next != nullptr) {
+        Type a = current->val;
+        Type b = current->next->val;
+        if (b - a > 1) {
+            for (int i = a + 1; i < b; ++i) {
+                auto * node = new Node<Type>(i, current->next);
+                current->next = node;
+                current = current->next;
+            }
+        } else {
+            current = current->next;
+        }
+    }
+}
+
+template <typename Type>
+void removedups(Node<Type> *& head) {
+    if (head == nullptr) {
+        return;
+    }
+    if (head->next == nullptr) {
+        return;
+    }
+
+    Node<Type> * current = head;
+    while(current != nullptr) {
+        Node<Type> * runner = current;
+        while (runner->next != nullptr) {
+            if (runner->next->val == current->val) {
+                Node<Type> * duplicate = runner->next;
+                runner->next = runner->next->next;
+                delete duplicate;
+            } else {
+                runner = runner->next;
+            }
+        }
+        current = current->next;
+    }
+}
 int main() {
-    LinkedList<int> * list = new LinkedList<int>(1, new LinkedList<int>(2, new LinkedList<int>(4)));
-
-
-    placeElementIndex(list, 0, 0);
-    removeElementIndex(list, 1);
-    addElementFront(list,12);
-//    addElementFront(list,1);
-//    reverse(list);
-    LinkedList<int> * temp = list;
-    displayLinkedList(list);
-    std::cout << getMiddle(temp);
+    Node<int> *list = nullptr;
+    insertAtEnd(list, 1);
+    insertAtEnd(list, 1);
+    insertAtEnd(list, 2);
+    insertAtEnd(list, 2);
+    insertAtEnd(list, 2);
+    insertAtEnd(list, 1);
+    insertAtEnd(list, 5);
+    removedups(list);
+    printList(list);
     deleteLinkedList(list);
-//    deleteLinkedList(temp);
+
 }

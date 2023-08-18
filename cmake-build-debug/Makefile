@@ -129,29 +129,29 @@ SDP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/build
 .PHONY : SDP/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+Linked-Lists/LinkedList.o: Linked-Lists/LinkedList.cpp.o
+.PHONY : Linked-Lists/LinkedList.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/main.cpp.o
-.PHONY : main.cpp.o
+Linked-Lists/LinkedList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o
+.PHONY : Linked-Lists/LinkedList.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+Linked-Lists/LinkedList.i: Linked-Lists/LinkedList.cpp.i
+.PHONY : Linked-Lists/LinkedList.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/main.cpp.i
-.PHONY : main.cpp.i
+Linked-Lists/LinkedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.i
+.PHONY : Linked-Lists/LinkedList.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+Linked-Lists/LinkedList.s: Linked-Lists/LinkedList.cpp.s
+.PHONY : Linked-Lists/LinkedList.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/main.cpp.s
-.PHONY : main.cpp.s
+Linked-Lists/LinkedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.s
+.PHONY : Linked-Lists/LinkedList.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SDP"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Linked-Lists/LinkedList.o"
+	@echo "... Linked-Lists/LinkedList.i"
+	@echo "... Linked-Lists/LinkedList.s"
 .PHONY : help
 
 

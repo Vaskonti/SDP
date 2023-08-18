@@ -1,2 +1,5 @@
 cop.sh
 unknownencoded
+*.o
+*.d
+*.json

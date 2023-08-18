@@ -69,28 +69,28 @@ include CMakeFiles/SDP.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SDP.dir/flags.make
 
-CMakeFiles/SDP.dir/main.cpp.o: CMakeFiles/SDP.dir/flags.make
-CMakeFiles/SDP.dir/main.cpp.o: /home/vasilhristov/projects/SDP/main.cpp
-CMakeFiles/SDP.dir/main.cpp.o: CMakeFiles/SDP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SDP.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDP.dir/main.cpp.o -MF CMakeFiles/SDP.dir/main.cpp.o.d -o CMakeFiles/SDP.dir/main.cpp.o -c /home/vasilhristov/projects/SDP/main.cpp
+CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o: CMakeFiles/SDP.dir/flags.make
+CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o: /home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.cpp
+CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o: CMakeFiles/SDP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o -MF CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o.d -o CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o -c /home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.cpp
 
-CMakeFiles/SDP.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDP.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vasilhristov/projects/SDP/main.cpp > CMakeFiles/SDP.dir/main.cpp.i
+CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.cpp > CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.i
 
-CMakeFiles/SDP.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDP.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vasilhristov/projects/SDP/main.cpp -o CMakeFiles/SDP.dir/main.cpp.s
+CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vasilhristov/projects/SDP/Linked-Lists/LinkedList.cpp -o CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.s
 
 # Object files for target SDP
 SDP_OBJECTS = \
-"CMakeFiles/SDP.dir/main.cpp.o"
+"CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o"
 
 # External object files for target SDP
 SDP_EXTERNAL_OBJECTS =
 
-SDP: CMakeFiles/SDP.dir/main.cpp.o
+SDP: CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o
 SDP: CMakeFiles/SDP.dir/build.make
 SDP: CMakeFiles/SDP.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SDP"

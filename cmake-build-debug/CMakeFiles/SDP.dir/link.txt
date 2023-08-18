@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/SDP.dir/main.cpp.o -o SDP 
+/usr/bin/g++ -g "CMakeFiles/SDP.dir/Linked-Lists/LinkedList.cpp.o" -o SDP 
