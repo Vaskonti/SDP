@@ -69,28 +69,28 @@ include CMakeFiles/SDP.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SDP.dir/flags.make
 
-CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o: CMakeFiles/SDP.dir/flags.make
-CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o: /home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.cpp
-CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o: CMakeFiles/SDP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o -MF CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o.d -o CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o -c /home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.cpp
+CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o: CMakeFiles/SDP.dir/flags.make
+CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o: /home/vasilhristov/projects/SDP/BinaryTrees/RandomTree.cpp
+CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o: CMakeFiles/SDP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o -MF CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o.d -o CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o -c /home/vasilhristov/projects/SDP/BinaryTrees/RandomTree.cpp
 
-CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.cpp > CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.i
+CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vasilhristov/projects/SDP/BinaryTrees/RandomTree.cpp > CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.i
 
-CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.cpp -o CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.s
+CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vasilhristov/projects/SDP/BinaryTrees/RandomTree.cpp -o CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.s
 
 # Object files for target SDP
 SDP_OBJECTS = \
-"CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o"
+"CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o"
 
 # External object files for target SDP
 SDP_EXTERNAL_OBJECTS =
 
-SDP: CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o
+SDP: CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o
 SDP: CMakeFiles/SDP.dir/build.make
 SDP: CMakeFiles/SDP.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SDP"

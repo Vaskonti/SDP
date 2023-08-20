@@ -129,29 +129,29 @@ SDP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/build
 .PHONY : SDP/fast
 
-BinaryTrees/BinaryTree.o: BinaryTrees/BinaryTree.cpp.o
-.PHONY : BinaryTrees/BinaryTree.o
+BinaryTrees/RandomTree.o: BinaryTrees/RandomTree.cpp.o
+.PHONY : BinaryTrees/RandomTree.o
 
 # target to build an object file
-BinaryTrees/BinaryTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o
-.PHONY : BinaryTrees/BinaryTree.cpp.o
+BinaryTrees/RandomTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o
+.PHONY : BinaryTrees/RandomTree.cpp.o
 
-BinaryTrees/BinaryTree.i: BinaryTrees/BinaryTree.cpp.i
-.PHONY : BinaryTrees/BinaryTree.i
+BinaryTrees/RandomTree.i: BinaryTrees/RandomTree.cpp.i
+.PHONY : BinaryTrees/RandomTree.i
 
 # target to preprocess a source file
-BinaryTrees/BinaryTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.i
-.PHONY : BinaryTrees/BinaryTree.cpp.i
+BinaryTrees/RandomTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.i
+.PHONY : BinaryTrees/RandomTree.cpp.i
 
-BinaryTrees/BinaryTree.s: BinaryTrees/BinaryTree.cpp.s
-.PHONY : BinaryTrees/BinaryTree.s
+BinaryTrees/RandomTree.s: BinaryTrees/RandomTree.cpp.s
+.PHONY : BinaryTrees/RandomTree.s
 
 # target to generate assembly for a file
-BinaryTrees/BinaryTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.s
-.PHONY : BinaryTrees/BinaryTree.cpp.s
+BinaryTrees/RandomTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.s
+.PHONY : BinaryTrees/RandomTree.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SDP"
-	@echo "... BinaryTrees/BinaryTree.o"
-	@echo "... BinaryTrees/BinaryTree.i"
-	@echo "... BinaryTrees/BinaryTree.s"
+	@echo "... BinaryTrees/RandomTree.o"
+	@echo "... BinaryTrees/RandomTree.i"
+	@echo "... BinaryTrees/RandomTree.s"
 .PHONY : help
 
 
