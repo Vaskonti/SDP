@@ -10,6 +10,7 @@ struct Node {
     }
 };
 
+// Reverse a linked list
 void reverse(Node *& head) {
     if (!head || !head->next) {
         return;
@@ -28,7 +29,26 @@ void reverse(Node *& head) {
     head = prev;
 }
 
+// Returne a reversed linked list
+Node * reverseList(Node * head) {
+    if (!head || !head->next) {
+        return head;
+    }
 
+    Node * prev = nullptr;
+    Node * current = head;
+    Node * next = nullptr;
+
+    while (current) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    return prev;
+}
+
+// Check if a linked list contains a given element
 bool contains(Node *& head, const int & el) {
     Node * iterator = head;
     while (iterator) {
@@ -40,6 +60,7 @@ bool contains(Node *& head, const int & el) {
     return false;
 }
 
+// Remove an element from a linked list
 void removeElement(Node *& node, const int & el) {
 
     if (!node) {
@@ -63,7 +84,7 @@ void removeElement(Node *& node, const int & el) {
         }
     }
 }
-
+// remove duplicates from a sorted list
 void removeDuplicates(Node *& head) {
     Node * iterator = head;
 
@@ -74,6 +95,7 @@ void removeDuplicates(Node *& head) {
         iterator = iterator->next;
     }
 }
+// Detect a cycle in a linked list
 bool hasCycle(Node * head) {
     Node * fast = head;
     while (fast && fast->next) {
@@ -85,6 +107,10 @@ bool hasCycle(Node * head) {
     }
     return false;
 }
+
+// Detect the node where the cycle begins
+// Input: [3,2,0,-4 -> 2] pos = 1
+// Output: 2
 Node * detectCycle(Node * head) {
     Node * slow = head;
     Node * fast = head;
@@ -105,43 +131,98 @@ Node * detectCycle(Node * head) {
     return slow;
 
 }
+// Merge two sorted lists into one sorted list
+// Input : list1:[1,1,2,4,5] list2:[0,1,2,5,7]
+// Output: [0,1,1,1,2,2,4,5,5,7]
 
-int main() {
-    Node * head = new Node(2);
+Node * mergeLists(Node * list1, Node * list2) {
+    Node * head = new Node(INT16_MIN);
+    Node * current = head;
 
+    while (list1 && list2) {
+        if (list1->val < list2->val) {
+            current->next = list1;
+            list1 = list1->next;
+        } else {
+            current->next = list2;
+            list2 = list2->next;
+        }
+        current = current->next;
+    }
+    current->next = (list1 ? list1 : list2);
+    return head->next;
+}
+//Get the middle of a linked list
+//Input: [1,2,3,4,5]
+//Output: 3 -> 4 -> 5
+Node * getMid(Node * head) {
+    if (!head || !head->next) {
+        return head;
+    }
+    Node * slow = head;
+    Node * fast = head->next;
 
-    Node * result = detectCycle(head);
-    if (result) {
-        std::cout << result->val << std::endl;
+    while (fast && fast->next) {
+        fast = fast->next->next;
+        slow = slow->next;
+    }
+    return slow;
+}
+
+// Sort a linked list in O(nlogn) time using constant space complexity
+// using merge sort algorithm
+Node * sortList(Node * head) {
+    if (!head || !head->next) {
+        return head;
+    }
+    Node * mid = getMid(head);
+    Node * left = head;
+    Node * right = mid->next;
+    mid->next = nullptr;
+
+    left = sortList(left);
+    right = sortList(right);
+
+    return mergeLists(left, right);
+}
+
+Node * removeNthFromEnd(Node * head, int n) {
+    Node * reversed = reverseList(head);
+    Node * copy = reversed;
+    int count = 0;
+
+    if (n == 1) {
+        Node * toRemove = reversed;
+        delete toRemove;
+
+        return reverseList(copy);
     } else {
-        std::cout << "No cycle" << std::endl;
+        while (reversed && count < n - 2) {
+            reversed = reversed->next;
+            count++;
+        }
+        Node * toRemove = reversed->next;
+        reversed->next = toRemove->next;
+        delete toRemove;
+
     }
 
+    return reverseList(copy);
 
-    return 0;
-//    LinkedList list;
-//    list.pushBack(1);
-//    list.pushBack(1);
-//    list.pushBack(2);
-//    list.pushBack(2);
-//    list.pushBack(3);
-//    list.pushBack(3);
-//    list.pushBack(1);
-//
-//    LinkedList list1;
-//    list1.pushBack(4);
-//    list1.pushBack(5);
-//    list1.pushBack(6);
+}
 
-//    list.print();
-//    list.removeDuplicates();
-//    list.print();
-//    list.unique();
-//    list.print();
-//    list.append(list1);
-//     isEven = [](int num) { return num % 2 == 0; };
-//    bool (*isEven)(int) = [](int num) { return num % 2 == 0; };
-//    list.filter(isEven).print();
-//    list.map([](int & num) { return num * num; }).filter([] (int num) {return num > 10; }).print();
-//    list.divide([](int num) { return num % 2 == 0; }).print();
+int main() {
+//    Node * node1 = new Node(1, new Node(2, new Node (2, new Node(8))));
+//    Node * node2 = new Node(0, new Node(1, new Node (3, new Node(9))));
+    Node * node3 = new Node(9, new Node(2));
+
+    Node * sorted = removeNthFromEnd(node3, 2);
+    while (sorted) {
+        Node * deleted = sorted;
+        std::cout << sorted->val << " ";
+        sorted = sorted->next;
+        delete deleted;
+
+    }
+
 }

@@ -88,9 +88,6 @@
 		<Unit filename="/home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.h">
 			<Option target="SDP"/>
 		</Unit>
-		<Unit filename="/home/vasilhristov/projects/SDP/Queue/queue.cpp">
-			<Option target="SDP"/>
-		</Unit>
 		<Unit filename="/home/vasilhristov/projects/SDP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

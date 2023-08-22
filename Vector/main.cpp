@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../BinaryTrees/BinaryTree.h"
 #include <vector>
 
 //1. По подаден елемент elem връща итератор (указател) към
@@ -120,16 +121,46 @@ std::vector<T> &unique(std::vector<T> &vector) {
     return vector;
 }
 
+template <typename T>
+int search(std::vector<T> & vector, T target) {
+    int left = 0;
+    int right = vector.size() - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (vector[mid] == target) {
+            return mid;
+        } else if (target > vector[mid]) {
+            left = mid + 1;
+        } else {
+            right = mid -1;
+        }
+    }
+    return -1;
+}
+
+template <typename T>
+std::vector<T> inorderTraversal(Node<T> * root) {
+
+    if (!root)
+        return {};
+
+    std::vector<T> left = inorderTraversal(root->left);
+    left.push_back(root->val);
+    std::vector<T> right = inorderTraversal(root->right);
+
+    left.insert(left.end(), right.begin(), right.end());
+    return left;
+}
+
 
 int main() {
-    std::vector<int> vector = {1, 1, 2, 1, 3, 1, 4, 4, 11};
-    std::vector<int> vector2 = {1, 2, 3, 6};
-    auto square = [](int x) { return x * x; };
-    auto isEven = [](int x) { return x % 2 == 0; };
-//    vector2 = filter(vector, isEven);
-    vector = unique(vector);
-    std::cout << (*getKthBigElement(vector, 3)) << std::endl;
-    for (const auto &item: vector) {
+    Node<int> * root = new Node<int>(1, new Node<int>(2,
+                                                      new Node<int>(4), new Node<int>(5)),
+                                            new Node<int>(3));
+    std::vector<int> result = inorderTraversal(root);
+    for (const auto &item: result) {
         std::cout << item << " ";
     }
 }

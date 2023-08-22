@@ -8,7 +8,7 @@ add_executable(SDP
 #        "Double Linked List/DLL.cpp"
 #        CircularList/CircularList.cpp
         BinaryTrees/BinaryTree.cpp
-        Queue/queue.cpp
+#        Queue/queue.cpp
         #        BinaryTrees/AVL.cpp
 #        BinaryTrees/AVL.h
 #                BinaryTrees/BinaryTree.h

@@ -153,30 +153,6 @@ BinaryTrees/BinaryTree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.s
 .PHONY : BinaryTrees/BinaryTree.cpp.s
 
-Queue/queue.o: Queue/queue.cpp.o
-.PHONY : Queue/queue.o
-
-# target to build an object file
-Queue/queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.o
-.PHONY : Queue/queue.cpp.o
-
-Queue/queue.i: Queue/queue.cpp.i
-.PHONY : Queue/queue.i
-
-# target to preprocess a source file
-Queue/queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.i
-.PHONY : Queue/queue.cpp.i
-
-Queue/queue.s: Queue/queue.cpp.s
-.PHONY : Queue/queue.s
-
-# target to generate assembly for a file
-Queue/queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.s
-.PHONY : Queue/queue.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +165,6 @@ help:
 	@echo "... BinaryTrees/BinaryTree.o"
 	@echo "... BinaryTrees/BinaryTree.i"
 	@echo "... BinaryTrees/BinaryTree.s"
-	@echo "... Queue/queue.o"
-	@echo "... Queue/queue.i"
-	@echo "... Queue/queue.s"
 .PHONY : help
 
 

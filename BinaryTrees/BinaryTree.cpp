@@ -5,6 +5,8 @@
 #include <cmath>
 #include <climits>
 
+// Check if the tree contains an element
+// Not a BST
 template<typename T>
 bool contains(Node<T> *&tree, T element) {
     if (tree == nullptr)
@@ -16,6 +18,7 @@ bool contains(Node<T> *&tree, T element) {
     return contains(tree->left, element) || contains(tree->right, element);
 }
 
+// Get the biggest element in the tree
 template<typename T>
 T biggest(Node<T> *&tree, T biggestEl) {
     if (tree == nullptr)
@@ -29,6 +32,7 @@ T biggest(Node<T> *&tree, T biggestEl) {
     return biggestLeft > biggestRight ? biggestLeft : biggestRight;
 }
 
+// Get the smallest element in the tree
 template<typename T>
 T smallest(Node<T> *&tree, T smallestEl) {
     if (tree == nullptr)
@@ -44,6 +48,7 @@ T smallest(Node<T> *&tree, T smallestEl) {
     return smallestRight > smallestLeft ? smallestLeft : smallestRight;
 }
 
+// Get the height/depth of the tree
 template<typename T>
 size_t height(Node<T> *&tree) {
     if (tree == nullptr)
@@ -75,6 +80,7 @@ void displayTree(Node<T> *root, int level = 0, char branch = 'R') {
     displayTree(root->left, level + 1, '\\');
 }
 
+// delete the tree
 template<typename Type>
 void cleanTree(Node<Type> *&tree) {
     if (tree == nullptr) {
@@ -85,6 +91,7 @@ void cleanTree(Node<Type> *&tree) {
     delete tree;
 }
 
+// Print the tree in the following order: left, root, right
 void leftRootRight(Node<int> *&tree) {
     if (tree == nullptr) {
         return;
@@ -100,6 +107,8 @@ void leftRootRight(Node<int> *&tree) {
 
 }
 
+// Check if the element is in the tree
+// O(log(n)) time complexity
 bool containsBST(Node<int> *&root, int element) {
     if (root == nullptr)
         return false;
@@ -111,6 +120,10 @@ bool containsBST(Node<int> *&root, int element) {
         return containsBST(root->left, element);
 }
 
+// Check where to insert the element
+// If the element is bigger than the root, insert it to the right
+// If the element is smaller than the root, insert it to the left
+// If the element is equal to the root, do nothing
 void insertToBST(Node<int> *&root, int element) {
     if (root == nullptr)
         return;
@@ -126,22 +139,32 @@ void insertToBST(Node<int> *&root, int element) {
     if (root->val < element) {
         insertToBST(root->right, element);
     }
-    if (root->val > element) {
+    else if (root->val > element) {
         insertToBST(root->left, element);
+    } else {
+        return;
     }
+}
+template <typename T>
+bool isValidBSTHelper(Node<T> *& root, T *& prevValue) {
+    if (root == nullptr)
+        return true;
+
+    if (!isValidBSTHelper(root->left, prevValue))
+        return false;
+
+    if (prevValue != nullptr && root->val <= *prevValue)
+        return false;
+
+    prevValue = &root->val;
+
+    return isValidBSTHelper(root->right, prevValue);
 }
 
 template<typename T>
 bool isValidBST(Node<T> *&root) {
-    if (root == nullptr)
-        return true;
-    if (!root->left && !root->right)
-        return true;
-    if (root->left && root->left->val > root->val)
-        return false;
-    if (root->right && root->right->val < root->val)
-        return false;
-    return isValidBST(root->left) && isValidBST(root->right);
+    T * prevValue = nullptr;
+    return isValidBSTHelper(root, prevValue);
 }
 
 bool canReadWord(Node<char> *&tree, std::string &word) {
@@ -287,31 +310,31 @@ int isBalanced(Node<int> *root) {
     return right - left;
 }
 
-int maxPathSum(Node<int>* root)
-{
-    int maxSum = INT_MIN;
-    DFS(root, maxSum);
-    return maxSum;
-}
-
-int DFS(Node<int>* root, int& maxSum){
-
-    if(!root)
-        return 0;
-    int left =std::max(0, DFS(root->left, maxSum));
-    int right = std::max(0, DFS(root->right, maxSum));
-    maxSum = std::max(maxSum, left + right + root->val);
-    return std::max(left, right) + root->val;
-}
+//int maxPathSum(Node<int>* root)
+//{
+//    int maxSum = INT_MIN;
+//    DFS(root, maxSum);
+//    return maxSum;
+//}
+//
+//int DFS(Node<int>* root, int& maxSum){
+//
+//    if(!root)
+//        return 0;
+//    int left =std::max(0, DFS(root->left, maxSum));
+//    int right = std::max(0, DFS(root->right, maxSum));
+//    maxSum = std::max(maxSum, left + right + root->val);
+//    return std::max(left, right) + root->val;
+//}
 
 int main() {
     //[1,2,3]
-    Node<int> *root = new Node<int>(1, new Node<int>(2), new Node<int>(-2));
+    Node<int> *root = new Node<int>(1, new Node<int>(1));
 //    Node<int> *root = new Node<int>(5, new Node<int>(3, new Node<int>(2 ,new Node<int>(4)),
 //                                           new Node<int>(7, new Node<int>(6,new Node<int>(8)))));
 
 
-    std::cout << maxPathSum(root) << std::endl;
+    std::cout << isValidBST(root) << std::endl;
     cleanTree(root);
 
 }
