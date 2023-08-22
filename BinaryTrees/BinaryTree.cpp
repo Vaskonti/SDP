@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
+#include <climits>
 
 template<typename T>
 bool contains(Node<T> *&tree, T element) {
@@ -54,7 +56,7 @@ size_t height(Node<T> *&tree) {
     return 1 + (leftHeight >= rightHeight ? leftHeight : rightHeight);
 }
 
-template <typename T>
+template<typename T>
 void displayTree(Node<T> *root, int level = 0, char branch = 'R') {
     if (root == nullptr) {
         return;
@@ -129,8 +131,8 @@ void insertToBST(Node<int> *&root, int element) {
     }
 }
 
-template <typename T>
-bool isValidBST(Node<T> *& root) {
+template<typename T>
+bool isValidBST(Node<T> *&root) {
     if (root == nullptr)
         return true;
     if (!root->left && !root->right)
@@ -169,8 +171,8 @@ void rootLeftRight(Node<T> *&root) {
     rootLeftRight(root->right);
 }
 
-template <typename T>
-void leftRightRoot(Node<T> *& root) {
+template<typename T>
+void leftRightRoot(Node<T> *&root) {
     if (root == nullptr)
         return;
 
@@ -191,7 +193,8 @@ void solution(Node<char> *&root, std::string &word) {
         throw std::logic_error("Word is too short");
 
 }
-template <typename T, class Lambda>
+
+template<typename T, class Lambda>
 void treeMap(Node<T> *&root, Lambda f) {
     if (root == nullptr)
         return;
@@ -201,14 +204,14 @@ void treeMap(Node<T> *&root, Lambda f) {
 }
 
 template<typename T, class Predicate>
-void filter(Node<T> *& root, Predicate pred) {
+void filter(Node<T> *&root, Predicate pred) {
     if (root == nullptr)
         return;
     filter(root->left, pred);
     filter(root->right, pred);
 
     if (!pred(root->val)) {
-        Node<T> * removed = root;
+        Node<T> *removed = root;
         if (root->left) {
             root = root->left;
         } else {
@@ -217,28 +220,33 @@ void filter(Node<T> *& root, Predicate pred) {
         delete removed;
     }
 }
-template <typename T>
-size_t countLeaves(Node<T> *& root) {
+
+template<typename T>
+size_t countLeaves(Node<T> *&root) {
     if (root == nullptr)
         return 0;
     if (!root->left && !root->right)
         return 1;
     return countLeaves(root->left) + countLeaves(root->right);
 }
-template <typename T>
+
+template<typename T>
 bool alwaysTrue(T arg) {
     return true;
 }
-template <typename T>
-size_t countChildrenInInterval(Node<T> *& root, int x, int y) {
+
+template<typename T>
+size_t countChildrenInInterval(Node<T> *&root, int x, int y) {
     if (root == nullptr)
         return 0;
     if (!root->left && !root->right)
         return x <= root->val && root->val <= y;
     else
-        return ( x <= root->val && root->val <= y) + countChildrenInInterval(root->left, x, y) + countChildrenInInterval(root->right, x, y);
+        return (x <= root->val && root->val <= y) + countChildrenInInterval(root->left, x, y) +
+               countChildrenInInterval(root->right, x, y);
 }
-int sumOddNumberSuccessors(Node<int> *& root, int x, int y) {
+
+int sumOddNumberSuccessors(Node<int> *&root, int x, int y) {
     if (root == nullptr)
         return 0;
     if (!root->left && !root->right) {
@@ -247,21 +255,63 @@ int sumOddNumberSuccessors(Node<int> *& root, int x, int y) {
     int children = countChildrenInInterval(root, x, y) - 1;
     children = children < 0 ? 0 : children;
     std::cout << "root: " << root->val << " children: " << children << std::endl;
-    if ( children % 2 != 0) {
+    if (children % 2 != 0) {
         return root->val + sumOddNumberSuccessors(root->left, x, y) + sumOddNumberSuccessors(root->right, x, y);
     } else {
-        return sumOddNumberSuccessors(root->left, x, y) + sumOddNumberSuccessors(root->right, x ,y);
+        return sumOddNumberSuccessors(root->left, x, y) + sumOddNumberSuccessors(root->right, x, y);
     }
 }
 
+int getDepth(Node<int> *root) {
+    if (!root) {
+        return 0;
+    }
+    if (!root->left && !root->right)
+        return 1;
+
+    int left = 1 + getDepth(root->left);
+    int right = 1 + getDepth(root->right);
+
+    return std::max(left, right);
+}
+
+int isBalanced(Node<int> *root) {
+    if (!root)
+        return true;
+    if (!root->left && !root->right)
+        return true;
+    int left = getDepth(root->left);
+    int right = getDepth(root->right);
+
+
+    return right - left;
+}
+
+int maxPathSum(Node<int>* root)
+{
+    int maxSum = INT_MIN;
+    DFS(root, maxSum);
+    return maxSum;
+}
+
+int DFS(Node<int>* root, int& maxSum){
+
+    if(!root)
+        return 0;
+    int left =std::max(0, DFS(root->left, maxSum));
+    int right = std::max(0, DFS(root->right, maxSum));
+    maxSum = std::max(maxSum, left + right + root->val);
+    return std::max(left, right) + root->val;
+}
+
 int main() {
-   Node <int> *root = new Node<int>(5, new Node<int>(3, new Node<int>(2), new Node<int>(4)), new Node<int>(7, new Node<int>(6), new Node<int>(8)));
+    //[1,2,3]
+    Node<int> *root = new Node<int>(1, new Node<int>(2), new Node<int>(-2));
+//    Node<int> *root = new Node<int>(5, new Node<int>(3, new Node<int>(2 ,new Node<int>(4)),
+//                                           new Node<int>(7, new Node<int>(6,new Node<int>(8)))));
 
 
-//    filter(root, [] (int i) { return i % 2 == 0; });
-    displayTree(root);
-
-    std::cout << sumOddNumberSuccessors(root, 1, 5) << std::endl;
+    std::cout << maxPathSum(root) << std::endl;
     cleanTree(root);
 
 }

@@ -74,18 +74,50 @@ void removeDuplicates(Node *& head) {
         iterator = iterator->next;
     }
 }
+bool hasCycle(Node * head) {
+    Node * fast = head;
+    while (fast && fast->next) {
+        fast = fast->next->next;
+        head = head->next;
+
+        if (head == fast)
+            return true;
+    }
+    return false;
+}
+Node * detectCycle(Node * head) {
+    Node * slow = head;
+    Node * fast = head;
+
+    while (fast && fast->next) {
+        fast = fast->next->next;
+        slow = slow->next;
+        if (slow == fast)
+            break;
+    }
+    if (!fast || !fast->next)
+        return nullptr;
+    slow = head;
+    while (slow != fast) {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    return slow;
+
+}
 
 int main() {
-    Node * head = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5, new Node(5, new Node(4, new Node(3, new Node(2, new Node(1))))))))));
-    reverse(head);
-    removeDuplicates(head);
-    while (head) {
-        Node * temp = head;
-        std::cout << head->val << " ";
-        head = head->next;
-        delete temp;
+    Node * head = new Node(2);
+
+
+    Node * result = detectCycle(head);
+    if (result) {
+        std::cout << result->val << std::endl;
+    } else {
+        std::cout << "No cycle" << std::endl;
     }
-    std::cout << std::endl;
+
+
     return 0;
 //    LinkedList list;
 //    list.pushBack(1);

@@ -81,12 +81,12 @@ clean: CMakeFiles/SDP.dir/clean
 CMakeFiles/SDP.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target SDP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target SDP"
 .PHONY : CMakeFiles/SDP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SDP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SDP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/SDP.dir/rule

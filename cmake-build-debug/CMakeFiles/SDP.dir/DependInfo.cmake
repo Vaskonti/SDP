@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vasilhristov/projects/SDP/BinaryTrees/RandomTree.cpp" "CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o" "gcc" "CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o.d"
+  "/home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.cpp" "CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o" "gcc" "CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o.d"
+  "/home/vasilhristov/projects/SDP/Queue/queue.cpp" "CMakeFiles/SDP.dir/Queue/queue.cpp.o" "gcc" "CMakeFiles/SDP.dir/Queue/queue.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

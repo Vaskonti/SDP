@@ -7,12 +7,20 @@ set(CMAKE_CXX_STANDARD 23)
 add_executable(SDP
 #        "Double Linked List/DLL.cpp"
 #        CircularList/CircularList.cpp
-#        BinaryTrees/BinaryTree.cpp
-#        BinaryTrees/AVL.cpp
+        BinaryTrees/BinaryTree.cpp
+        Queue/queue.cpp
+        #        BinaryTrees/AVL.cpp
 #        BinaryTrees/AVL.h
 #                BinaryTrees/BinaryTree.h
-        BinaryTrees/RandomTree.cpp
-        BinaryTrees/RandomTree.h
+#        BinaryTrees/RandomTree.cpp
+#        BinaryTrees/RandomTree.h
+#        Vector/main.cpp
+#        Graph/AdjacencyListGraph.cpp
+#        Graph/AdjacencyListGraph.h
+#        Graph/MatrixGraph.cpp
+#        Graph/MatrixGraph.h
+#        main.cpp
+#        Linked-Lists/LinkedList.cpp
         #        CircularList/CircularList.h)
 #add_executable(SDP
 )

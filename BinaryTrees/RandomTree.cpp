@@ -1,7 +1,3 @@
-//
-// Created by vasilhristov on 20.08.23.
-//
-
 #include "RandomTree.h"
 
 

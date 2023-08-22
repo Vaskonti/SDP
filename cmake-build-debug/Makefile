@@ -129,29 +129,53 @@ SDP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/build
 .PHONY : SDP/fast
 
-BinaryTrees/RandomTree.o: BinaryTrees/RandomTree.cpp.o
-.PHONY : BinaryTrees/RandomTree.o
+BinaryTrees/BinaryTree.o: BinaryTrees/BinaryTree.cpp.o
+.PHONY : BinaryTrees/BinaryTree.o
 
 # target to build an object file
-BinaryTrees/RandomTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.o
-.PHONY : BinaryTrees/RandomTree.cpp.o
+BinaryTrees/BinaryTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o
+.PHONY : BinaryTrees/BinaryTree.cpp.o
 
-BinaryTrees/RandomTree.i: BinaryTrees/RandomTree.cpp.i
-.PHONY : BinaryTrees/RandomTree.i
+BinaryTrees/BinaryTree.i: BinaryTrees/BinaryTree.cpp.i
+.PHONY : BinaryTrees/BinaryTree.i
 
 # target to preprocess a source file
-BinaryTrees/RandomTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.i
-.PHONY : BinaryTrees/RandomTree.cpp.i
+BinaryTrees/BinaryTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.i
+.PHONY : BinaryTrees/BinaryTree.cpp.i
 
-BinaryTrees/RandomTree.s: BinaryTrees/RandomTree.cpp.s
-.PHONY : BinaryTrees/RandomTree.s
+BinaryTrees/BinaryTree.s: BinaryTrees/BinaryTree.cpp.s
+.PHONY : BinaryTrees/BinaryTree.s
 
 # target to generate assembly for a file
-BinaryTrees/RandomTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/RandomTree.cpp.s
-.PHONY : BinaryTrees/RandomTree.cpp.s
+BinaryTrees/BinaryTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.s
+.PHONY : BinaryTrees/BinaryTree.cpp.s
+
+Queue/queue.o: Queue/queue.cpp.o
+.PHONY : Queue/queue.o
+
+# target to build an object file
+Queue/queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.o
+.PHONY : Queue/queue.cpp.o
+
+Queue/queue.i: Queue/queue.cpp.i
+.PHONY : Queue/queue.i
+
+# target to preprocess a source file
+Queue/queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.i
+.PHONY : Queue/queue.cpp.i
+
+Queue/queue.s: Queue/queue.cpp.s
+.PHONY : Queue/queue.s
+
+# target to generate assembly for a file
+Queue/queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.s
+.PHONY : Queue/queue.cpp.s
 
 # Help Target
 help:
@@ -162,9 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SDP"
-	@echo "... BinaryTrees/RandomTree.o"
-	@echo "... BinaryTrees/RandomTree.i"
-	@echo "... BinaryTrees/RandomTree.s"
+	@echo "... BinaryTrees/BinaryTree.o"
+	@echo "... BinaryTrees/BinaryTree.i"
+	@echo "... BinaryTrees/BinaryTree.s"
+	@echo "... Queue/queue.o"
+	@echo "... Queue/queue.i"
+	@echo "... Queue/queue.s"
 .PHONY : help
 
 
