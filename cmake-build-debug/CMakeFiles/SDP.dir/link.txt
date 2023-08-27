@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/SDP.dir/BinaryTrees/BinaryTree.cpp.o -o SDP 
+/usr/bin/g++ -g CMakeFiles/SDP.dir/OldExams/random.cpp.o -o SDP 

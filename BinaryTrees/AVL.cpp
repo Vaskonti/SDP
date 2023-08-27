@@ -6,6 +6,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <list>
+#include <vector>
 
 template <typename T>
 int getHeight(Node<T> *& root) {
@@ -105,8 +106,16 @@ void addElement(Node<T> *& root, const T & element) {
     }
 }
 
+Node<int> * toTree(const int * arr, int size) {
 
+}
 
 int main() {
+    int * arr = new int[10];
+    for (int i = 0; i < 10; ++i) {
+        arr[i] = i;
+    }
+
+    Node<int> * root = toTree(arr,10);
 
 }

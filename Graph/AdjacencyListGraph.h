@@ -8,6 +8,7 @@
 #include <vector>
 #include <list>
 #include <algorithm>
+#include <stack>
 
 
 class AdjacencyListGraph {
@@ -38,6 +39,7 @@ public:
     size_t vertexCount() const;
 
     std::vector<Edge> adjacent(vertex_t) const;
+    std::vector<vertex_t> dfs(vertex_t start);
 };
 
 AdjacencyListGraph::AdjacencyListGraph(size_t n) {
@@ -114,6 +116,31 @@ void AdjacencyListGraph::removeVertex(AdjacencyListGraph::vertex_t vertex) {
 
 bool AdjacencyListGraph::validVertex(AdjacencyListGraph::vertex_t vertex) const {
     return vertex < this->data.size();
+}
+
+std::vector<AdjacencyListGraph::vertex_t> AdjacencyListGraph::dfs(AdjacencyListGraph::vertex_t start) {
+    std::vector<int> visited(this->data.size(), false);
+    std::vector<vertex_t> order(this->data.size());
+    std::stack<vertex_t> stack;
+
+    stack.push(start);
+
+    while(!stack.empty()) {
+        vertex_t currentVertex = stack.top();
+        stack.pop();
+
+        if(!visited[currentVertex]) {
+            order.push_back(currentVertex);
+            visited[currentVertex] = true;
+        }
+
+        for (auto edge: data[currentVertex]) {
+            if (!visited[edge.to]) {
+                stack.push(edge.to);
+            }
+        }
+    }
+    return order;
 }
 
 

@@ -9,5 +9,8 @@ int main() {
     graph.addEdge(0, 4, 1);
     graph.addEdge(1, 2, 2);
 
-    std::cout << graph.getWeight(0, 1) << std::endl;
+   std::vector<unsigned int> order = graph.dfs(0);
+    for (const auto &item: order) {
+        std::cout << item << " ";
+    }
 }

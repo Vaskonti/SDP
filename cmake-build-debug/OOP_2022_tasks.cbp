@@ -82,10 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.cpp">
-			<Option target="SDP"/>
-		</Unit>
-		<Unit filename="/home/vasilhristov/projects/SDP/BinaryTrees/BinaryTree.h">
+		<Unit filename="/home/vasilhristov/projects/SDP/OldExams/random.cpp">
 			<Option target="SDP"/>
 		</Unit>
 		<Unit filename="/home/vasilhristov/projects/SDP/CMakeLists.txt">

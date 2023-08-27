@@ -1,4 +1,4 @@
-/snap/clion/248/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++ -G "CodeBlocks - Unix Makefiles" -S /home/vasilhristov/projects/SDP -B /home/vasilhristov/projects/SDP/cmake-build-debug
+/snap/clion/249/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++ -G "CodeBlocks - Unix Makefiles" -S /home/vasilhristov/projects/SDP -B /home/vasilhristov/projects/SDP/cmake-build-debug
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/vasilhristov/projects/SDP/cmake-build-debug

@@ -327,14 +327,93 @@ int isBalanced(Node<int> *root) {
 //    return std::max(left, right) + root->val;
 //}
 
+// Time complexity O(n)
+size_t toArray(Node<int> * tree, int * output) {
+    if (!tree)
+        return 0;
+    size_t size = 0;
+    size += toArray(tree->left, output);
+    output[size++] = tree->val;
+    size += toArray(tree->right, output + size);
+    return size;
+
+}
+
+template <typename T>
+void release(Node<T> * root) {
+    if (!root) {
+        return;
+    }
+    if (!root->left && !root->right) {
+        delete root;
+        return;
+    }
+
+    release(root->left);
+    release(root->right);
+    delete root;
+}
+//      5
+//    3   7
+//   2 4 6 8
+
+Node<int> * toTree(const int * array, int size) {
+    if (size == 0)
+        return nullptr;
+    int middle = size / 2;
+    Node<int> * root = new Node<int> (array[middle]);
+    root->left = toTree(array, middle);
+    root->right = toTree(array + middle + 1, size - middle - 1);
+    return root;
+}
+
+void rightLeftRoot(Node<int> * root) {
+    if (!root) {
+        return;
+    }
+
+    rightLeftRoot(root->right);
+    rightLeftRoot(root->left);
+
+    std::cout << root->val << " ";
+}
+// При нормална имплементация
+/*
+ * Pos {
+ *  T data;
+ *  Pos left;
+ *  Pos right;
+ *  };
+ *  Pos * rootPosition() {
+ *      return tree;
+ *  }
+ */
+Node<int> * tree = new Node<int> (5, new Node<int> (3, new Node<int> (2), new Node<int> (4)), new Node<int> (7, new Node<int> (12), new Node<int> (8)));
+Node<int> * rootPosition() {
+    return tree;
+}
+template <typename T>
+Node<int> *  search(T const& x) {
+    Node<int> * pos = rootPosition();
+    while (pos->val != x && pos) {
+        if (pos->val > x) pos = pos->left;
+        if (pos->val < x) pos = pos->right;
+    }
+    return pos;
+}
+
 int main() {
-    //[1,2,3]
-    Node<int> *root = new Node<int>(1, new Node<int>(1));
-//    Node<int> *root = new Node<int>(5, new Node<int>(3, new Node<int>(2 ,new Node<int>(4)),
-//                                           new Node<int>(7, new Node<int>(6,new Node<int>(8)))));
 
-
-    std::cout << isValidBST(root) << std::endl;
-    cleanTree(root);
-
+    int element = 6;
+    Node<int> * node = search(element);
+//    int * output = new int[7];
+//    std::cout << toArray(root, output) << std::endl;
+//    for (int i = 0; i < 7; ++i) {
+//      output[i] = i;
+//    }
+//    Node<int> * root = toTree(output, 7);
+    displayTree(node);
+//    rightLeftRoot(root);
+//    delete [] output;
+    release(tree);
 }
