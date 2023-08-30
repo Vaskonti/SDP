@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SDP.dir/OldExams/random.cpp.o"
-  "CMakeFiles/SDP.dir/OldExams/random.cpp.o.d"
+  "CMakeFiles/SDP.dir/Queue/queue.cpp.o"
+  "CMakeFiles/SDP.dir/Queue/queue.cpp.o.d"
   "SDP"
   "SDP.pdb"
 )

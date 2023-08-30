@@ -69,28 +69,28 @@ include CMakeFiles/SDP.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SDP.dir/flags.make
 
-CMakeFiles/SDP.dir/OldExams/random.cpp.o: CMakeFiles/SDP.dir/flags.make
-CMakeFiles/SDP.dir/OldExams/random.cpp.o: /home/vasilhristov/projects/SDP/OldExams/random.cpp
-CMakeFiles/SDP.dir/OldExams/random.cpp.o: CMakeFiles/SDP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SDP.dir/OldExams/random.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDP.dir/OldExams/random.cpp.o -MF CMakeFiles/SDP.dir/OldExams/random.cpp.o.d -o CMakeFiles/SDP.dir/OldExams/random.cpp.o -c /home/vasilhristov/projects/SDP/OldExams/random.cpp
+CMakeFiles/SDP.dir/Queue/queue.cpp.o: CMakeFiles/SDP.dir/flags.make
+CMakeFiles/SDP.dir/Queue/queue.cpp.o: /home/vasilhristov/projects/SDP/Queue/queue.cpp
+CMakeFiles/SDP.dir/Queue/queue.cpp.o: CMakeFiles/SDP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SDP.dir/Queue/queue.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDP.dir/Queue/queue.cpp.o -MF CMakeFiles/SDP.dir/Queue/queue.cpp.o.d -o CMakeFiles/SDP.dir/Queue/queue.cpp.o -c /home/vasilhristov/projects/SDP/Queue/queue.cpp
 
-CMakeFiles/SDP.dir/OldExams/random.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDP.dir/OldExams/random.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vasilhristov/projects/SDP/OldExams/random.cpp > CMakeFiles/SDP.dir/OldExams/random.cpp.i
+CMakeFiles/SDP.dir/Queue/queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDP.dir/Queue/queue.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vasilhristov/projects/SDP/Queue/queue.cpp > CMakeFiles/SDP.dir/Queue/queue.cpp.i
 
-CMakeFiles/SDP.dir/OldExams/random.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDP.dir/OldExams/random.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vasilhristov/projects/SDP/OldExams/random.cpp -o CMakeFiles/SDP.dir/OldExams/random.cpp.s
+CMakeFiles/SDP.dir/Queue/queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDP.dir/Queue/queue.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vasilhristov/projects/SDP/Queue/queue.cpp -o CMakeFiles/SDP.dir/Queue/queue.cpp.s
 
 # Object files for target SDP
 SDP_OBJECTS = \
-"CMakeFiles/SDP.dir/OldExams/random.cpp.o"
+"CMakeFiles/SDP.dir/Queue/queue.cpp.o"
 
 # External object files for target SDP
 SDP_EXTERNAL_OBJECTS =
 
-SDP: CMakeFiles/SDP.dir/OldExams/random.cpp.o
+SDP: CMakeFiles/SDP.dir/Queue/queue.cpp.o
 SDP: CMakeFiles/SDP.dir/build.make
 SDP: CMakeFiles/SDP.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vasilhristov/projects/SDP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SDP"

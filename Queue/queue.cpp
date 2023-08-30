@@ -30,6 +30,38 @@ bool isSorted(std::queue<int> & queue) {
     }
     return true;
 }
+
+int getSmallestElement(std::queue<int> & queue) {
+    if (queue.empty()) {
+        throw std::logic_error("cannot find smallest element of an empty queue");
+    }
+    std::queue<int> helper;
+
+    int first = queue.front();
+    queue.pop();
+
+    while(!queue.empty()) {
+        if (first > queue.front()) {
+            helper.push(first);
+            first = queue.front();
+        } else {
+            helper.push(queue.front());
+        }
+        queue.pop();
+    }
+    queue = helper;
+    return first;
+}
+
+void sortQueue(std::queue<int> & queue) {
+    std::queue<int> sorted;
+
+    while (!queue.empty()) {
+        sorted.push(getSmallestElement(queue));
+    }
+    queue = sorted;
+}
+
 int main() {
     std::queue<int> queue;
     queue.push(4);
@@ -38,6 +70,10 @@ int main() {
     queue.push(0);
     queue.push(-1);
 
-    std::cout << isSorted(queue) << std::endl;
+    sortQueue(queue);
+    while(!queue.empty()) {
+        std::cout << queue.front() << " ";
+        queue.pop();
+    }
     return 0;
 }

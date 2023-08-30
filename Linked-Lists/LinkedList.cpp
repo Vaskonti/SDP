@@ -215,8 +215,9 @@ Node *removeNthFromEnd(Node *head, int n) {
 
 }
 
-Node *mergeTwoLists(Node *list1, Node *list2) {
-    Node *head;
+Node * mergeTwoLists(Node * list1, Node * list2) {
+    Node * head = nullptr;
+
     if (list1->val < list2->val) {
         head = list1;
         list1 = list1->next;
@@ -224,7 +225,8 @@ Node *mergeTwoLists(Node *list1, Node *list2) {
         head = list2;
         list2 = list2->next;
     }
-    Node *current = head;
+
+    Node * current = head;
 
     while (list1 && list2) {
         if (list1->val < list2->val) {
@@ -238,9 +240,9 @@ Node *mergeTwoLists(Node *list1, Node *list2) {
     }
 
     if (list1) {
-        current = list1;
+        current->next = list1;
     } else {
-        current = list2;
+        current->next = list2;
     }
 
     return head;

@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/vasilhristov/projects/SDP/OldExams/random.cpp">
+		<Unit filename="/home/vasilhristov/projects/SDP/Queue/queue.cpp">
 			<Option target="SDP"/>
 		</Unit>
 		<Unit filename="/home/vasilhristov/projects/SDP/CMakeLists.txt">

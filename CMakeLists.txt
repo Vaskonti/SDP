@@ -8,12 +8,16 @@ add_executable(SDP
 #        "Double Linked List/DLL.cpp"
 #        CircularList/CircularList.cpp
 #        BinaryTrees/BinaryTree.cpp
-#        Hash/HashTable.cpp
+#        Dictionaries/dicts.cpp
+#        DynamicTemplate/DynamicTemplate.cpp
+        #        Hash/HashTable.cpp
+        #        Hash/HashTable.cpp
 #        Hash/HashTable.h
 #        ArbitraryTrees/ArbitraryTree.cpp
-#        ArbitraryTrees/ArbitraryTree.h
-        OldExams/random.cpp
-        #        Queue/queue.cpp
+#        DynamicTemplate/DynamicTemplateStack.cpp
+        #        ArbitraryTrees/ArbitraryTree.h
+#        OldExams/random.cpp
+                Queue/queue.cpp
 #                BinaryTrees/AVL.cpp
 #        BinaryTrees/AVL.h
 #                BinaryTrees/BinaryTree.h

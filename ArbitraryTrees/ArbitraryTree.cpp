@@ -5,6 +5,7 @@
 #include "ArbitraryTree.h"
 #include <iostream>
 #include <vector>
+#include <queue>
 
 int absDistance(int a, int b) {
     if (a >= b)
@@ -37,6 +38,7 @@ bool unique(std::vector<T> & vector) {
     }
     return true;
 }
+
 size_t countElementsInATree(ArbitraryNode * root) {
     if (!root)
         return 0;
@@ -49,6 +51,7 @@ size_t countElementsInATree(ArbitraryNode * root) {
     }
     return count;
 }
+
 std::vector<int> getFirstNOdd(int n) {
     if (n == 0)
         return std::vector<int>();
@@ -128,20 +131,26 @@ void freeTree(ArbitraryNode * root) {
 
 
 int main() {
+    std::queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.push(4);
+
+    std::cout << q.back() << std::endl;
     // odd numbers only for values
-    ArbitraryNode * root = new ArbitraryNode(7);
-    ArbitraryNode * child = new ArbitraryNode(3, root);
-    root->children.push_back(child);
-    ArbitraryNode * child1 = new ArbitraryNode(9, child);
-    child->children.push_back(child1);
-    ArbitraryNode * child2 = new ArbitraryNode(5, child1);
-    child1->children.push_back(child2);
-    ArbitraryNode * child3 = new ArbitraryNode(1, child1);
-    child1->children.push_back(child3);
-
-//            )};
-    std::cout << isGracious(root) << std::endl;
-
-    freeTree(root);
+//    ArbitraryNode * root = new ArbitraryNode(7);
+//    ArbitraryNode * child = new ArbitraryNode(3, root);
+//    root->children.push_back(child);
+//    ArbitraryNode * child1 = new ArbitraryNode(9, child);
+//    child->children.push_back(child1);
+//    ArbitraryNode * child2 = new ArbitraryNode(5, child1);
+//    child1->children.push_back(child2);
+//    ArbitraryNode * child3 = new ArbitraryNode(1, child1);
+//    child1->children.push_back(child3);
+//
+//    std::cout << isGracious(root) << std::endl;
+//
+//    freeTree(root);
     return 0;
 }

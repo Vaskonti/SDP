@@ -404,16 +404,8 @@ Node<int> *  search(T const& x) {
 
 int main() {
 
-    int element = 6;
-    Node<int> * node = search(element);
-//    int * output = new int[7];
-//    std::cout << toArray(root, output) << std::endl;
-//    for (int i = 0; i < 7; ++i) {
-//      output[i] = i;
-//    }
-//    Node<int> * root = toTree(output, 7);
+    Node<int> * node = new Node(5, new Node(3, new Node<int>(2, new Node(1, new Node(0)))), new Node(7, new Node(6), new Node (8)));
     displayTree(node);
-//    rightLeftRoot(root);
-//    delete [] output;
+    rightLeftRoot(node);
     release(tree);
 }

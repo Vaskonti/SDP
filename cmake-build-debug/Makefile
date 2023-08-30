@@ -129,29 +129,29 @@ SDP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/build
 .PHONY : SDP/fast
 
-OldExams/random.o: OldExams/random.cpp.o
-.PHONY : OldExams/random.o
+Queue/queue.o: Queue/queue.cpp.o
+.PHONY : Queue/queue.o
 
 # target to build an object file
-OldExams/random.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/OldExams/random.cpp.o
-.PHONY : OldExams/random.cpp.o
+Queue/queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.o
+.PHONY : Queue/queue.cpp.o
 
-OldExams/random.i: OldExams/random.cpp.i
-.PHONY : OldExams/random.i
+Queue/queue.i: Queue/queue.cpp.i
+.PHONY : Queue/queue.i
 
 # target to preprocess a source file
-OldExams/random.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/OldExams/random.cpp.i
-.PHONY : OldExams/random.cpp.i
+Queue/queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.i
+.PHONY : Queue/queue.cpp.i
 
-OldExams/random.s: OldExams/random.cpp.s
-.PHONY : OldExams/random.s
+Queue/queue.s: Queue/queue.cpp.s
+.PHONY : Queue/queue.s
 
 # target to generate assembly for a file
-OldExams/random.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/OldExams/random.cpp.s
-.PHONY : OldExams/random.cpp.s
+Queue/queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDP.dir/build.make CMakeFiles/SDP.dir/Queue/queue.cpp.s
+.PHONY : Queue/queue.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SDP"
-	@echo "... OldExams/random.o"
-	@echo "... OldExams/random.i"
-	@echo "... OldExams/random.s"
+	@echo "... Queue/queue.o"
+	@echo "... Queue/queue.i"
+	@echo "... Queue/queue.s"
 .PHONY : help
 
 
